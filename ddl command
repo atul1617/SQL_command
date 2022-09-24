@@ -1,0 +1,29 @@
+CREATE TABLE student
+(
+rollno int(10) primary key,
+name varchar(10),
+ dept varchar(10),
+ city varchar(10),
+ dob DATE not null,
+ gender char(5)
+ );
+ select * from student;
+ create table studmarks 
+ ( 
+ rollno int(10),
+ regnumber int(14), 
+ semester int(1),
+ cgpa int(24)
+ );
+ select * from studmarks;
+ alter table studmarks add constraint s unique(regnumber);
+ desc student;
+alter table student 
+add(age int(2)not null);
+alter table studmarks
+modify regnumber varchar(16);
+DESC STUDMARKS;
+alter table studmarks drop constraint s;
+alter table student rename column dob to dateofbirth;
+ alter table studmarks add foreign key(rollno) references student(rollno);
+
