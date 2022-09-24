@@ -1,0 +1,56 @@
+
+create table employee
+( ssn int , name varchar(10),bdate date,salary int ,
+mgrssn int ,dno int );
+select *from employee;
+
+insert into employee
+values(1111	,'sathya','1988-10-17',50000,4323,3);
+insert into employee
+values(1112,'vinotha','1990-08-02',32000	,5462,1);
+insert into employee
+values(1113,'nandu','1993-10-07',30000,6452,2);
+insert into employee
+values(1114,'rajesh','1985-04-05',40000,8264,2);
+insert into employee
+values(1115,'nive','1992-08-06',45000,7241,1);
+create table department
+(dno int,dname varchar(10),loc varchar(10));
+insert into department 
+values(1,'admin','madurai');
+insert into department
+values(2,'research','chhenai');
+insert into department 
+values(3,'accounts','banglore');
+select * from department;
+select name from employee
+ where dno=(select dno from department where dname='accounts');
+ select name from employee 
+ where salary>(select salary from employee where ssn=1234);
+ select name from employee 
+ where salary>=(select avg(salary) from employee group by dno having dno=3);
+ select name from employee
+ where salary=(select max(salary) from employee);
+ select name, salary from employee
+ where salary in(select salary from employee where salary between 20000 and 40000);
+ update employee 
+ set salary=(salary*0.25)
+ where dno=(select dno from department where dname='research');
+delete from employee where dno=(select dno from department where dname='admin');
+SELECT dname from department 
+where dno=(select dno from employee where salary=(select max(salary)from employee);
+select name from employee
+ where salary>(select salary from employee where name= ‘nandu’)and dno=(select dno from employee where name= ‘sathya’);
+ 
+select * from employee cross join department;
+ select * from employee inner join department on employee.dno=department.dno;
+ select * from employee join department on employee.dno=department.dno;
+
+insert into employee 
+values(1116,'palani','1960-10-06',90000,6372,4);
+select * from employee;
+insert into department 
+values(5,'medical','delhi');
+select * from employee left outer join department on employee.dno=department.dno;
+select * from employee right outer join department on employee.dno=department.dno;
+select * from employee full outer join department on employee.dno=department.dno;
