@@ -1,0 +1,20 @@
+create table books
+(bookno int(3),title varchar(25),publication varchar(25),
+author varchar(25),price int(6),
+quantity int(3),edition int(2));
+desc books;
+ insert into books values
+ (1,'databaseconcept','tata','balaguruswamy',850,10,4); 
+insert into books 
+values(2,'database system','tata','silberschatz',700.00,17,3);
+insert into books
+values(3,'database oracle','s.chand','s.s.khandars',500,12,2);
+select * from books;
+select title,author from books;
+select * from books where title='database system';
+select author from books;
+select * from books where price>800.00;
+ select * from books where quantity>15;
+select * from books where author='balagurusamy' and publication='tata';
+select title from books where title=’databaseconcept’;
+desc stud;
