@@ -1,0 +1,18 @@
+create table student_details
+(serial_no int,roll_no int,enrollment_no varchar(20), name varchar(20),father_name varchar(20), 
+mobile_no varchar(10), address varchar(50),semester varchar(10),branch varchar(10));
+select*from student_details;
+insert into student_details values(1,208230030,'R208237341', 'atul thakur','manoj thakur','6263901617','seoni madhypradesh','3rd sem','CSE');
+select*from student_details;
+insert into student_details values
+(2,208239930,'R2082376761', 'amit','mahesh','6263948761','bhopal madhypradesh','4th sem','ME'),
+(3,208234764,'R2082373466', 'ojasav','mahesh','6263903311','mandla madhypradesh','3rd sem','CSE'),
+(4,208233330,'R2082373415', 'rahul','jatin','6263901612','seoni madhypradesh','5th sem','CSE'),
+(5,208230433,'R2082373413', 'nitin','ramesh','6263901613','delhi ','6th sem','CSE'),
+(6,208267030,'R2082373414', 'shayam ','mahesh','6263901614',' madhypradesh','5th sem','EE'),
+(7,208230056,'R2082373418', 'ganesh thakur','ramesh thakur','6263901615','usa','3rd sem','Civil'),
+(8,208230045,'R2082373413', 'ramesh thakur','ajuu thakur','6263901616','seoni madhypradesh','1st sem','CSE'),
+(9,208230064,'R2082373411', 'raju thakur','ramnath','6263901618','mumbai','2nd sem','EC'),
+(10,20823540,'R2082373410', 'tarun thakur','babulal ','6263901619','satna madhypradesh','1st sem','CSE')
+;
+select*from student_details;
